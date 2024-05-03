@@ -1,0 +1,6 @@
+openvsp_api/sample_set
+logs
+.vsptime
+IP_Data
+*.pyc
+GAN/test
