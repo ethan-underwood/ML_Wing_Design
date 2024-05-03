@@ -1,7 +1,6 @@
 import numpy as np
 import pickle
 import random
-from sklearn.preprocessing import OneHotEncoder
 import tensorflow as tf
 from tensorflow.keras.layers import Input, Dense, Concatenate, LeakyReLU
 from tensorflow.keras.models import Model
