@@ -1,6 +1,6 @@
 from scipy.stats import qmc
-from utility_functions import scale_sample, scale_sample_without_LD
-from analysis_functions import get_data_from_vlm_output, get_data_from_vsp_file, calculate_range, calculate_range_from_files
+from utility_functions import scale_sample_without_LD
+from analysis_functions import get_data_from_vlm_output, get_data_from_vsp_file, calculate_range_from_files
 from numpy.random import rand
 from numpy import ones, hstack
 import openvsp as vsp

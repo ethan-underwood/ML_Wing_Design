@@ -1,12 +1,9 @@
-from keras import layers
-#from keras import ops
-import tensorflow as tf
 import numpy as np
 
 from generation_functions import create_random_input_params, create_wing
 from analysis_functions import get_Xref_and_Sref, analyse_VLM
 from plotting_functions import calculate_data_for_plotting, plot_analysis
-from utility_functions import get_data_from_vsp_file, get_data_from_vlm_output, calculate_rmse, getFirstValues, scale_sample
+from utility_functions import get_data_from_vlm_output, calculate_rmse, scale_sample
 from model_functions import split_data_for_model, create_neural_network, train_neural_network, plot_loss
 from scipy.stats import qmc
 import openvsp as vsp
@@ -99,17 +96,6 @@ for index, scaledSampleParams in enumerate(scaledMultipleSampleParams):
         for j in i:
             sampleInputVariables.append(j)
     MLInputData.append(sampleInputVariables)
-
-    """
-    sampleOutputVariables = []
-    for xsec_variable in ['Aspect', 'Span', 'Taper', 'Sweep']:
-        sampleOutputVariables.append(get_data_from_vsp_file(vsp_file, xsec_variable, 'XSec_1'))
-    for xsec_curve_variable in ['ThickChord', 'Camber', 'CamberLoc']:
-        sampleOutputVariables.append(get_data_from_vsp_file(vsp_file, xsec_curve_variable, 'XSecCurve_0'))
-    sampleOutputVariables.append(get_data_from_vlm_output(vlm_analysis_output_file, 'AoA'))
-    MLOutputData.append(sampleOutputVariables)
-    #print("MLOutputData = ", MLOutputData)
-    """
 
     # Clean up if a temporary directory was used
     if not outputParentDir:

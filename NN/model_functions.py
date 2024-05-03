@@ -1,13 +1,10 @@
 import numpy as np
 import tensorflow as tf
-from tensorflow import keras
 from keras.models import Sequential
-from keras.layers import Dense, Activation, Lambda
+from keras.layers import Dense
 from keras.callbacks import Callback
 from keras import ops
-import keras.backend as K
 import matplotlib.pyplot as plt
-from ann_visualizer.visualize import ann_viz
 
 def split_data_for_model(
         inputData:list[float],

@@ -1,9 +1,6 @@
-import pickle
 from matplotlib import pyplot as plt
-import openvsp as vsp
-from utility_functions import get_data_from_vsp_file, get_data_from_vlm_output, create_one_hot_encoder_label, scale_sample
-from generation_functions import create_wing, calculate_range_from_files
-from analysis_functions import get_data_from_vlm_output, get_Xref_and_Sref, analyse_VLM
+from utility_functions import get_data_from_vsp_file, get_data_from_vlm_output
+from analysis_functions import get_data_from_vlm_output
 
 
 def calculate_data_for_plotting(

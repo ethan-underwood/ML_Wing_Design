@@ -1,6 +1,4 @@
-
 from matplotlib import pyplot as plt
-import openvsp as vsp
 from utility_functions import get_data_from_vsp_file, get_data_from_vlm_output
 
 def calculate_data_for_plotting(
